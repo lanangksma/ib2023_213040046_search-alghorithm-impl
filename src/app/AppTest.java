@@ -7,6 +7,8 @@ import app.ucs.UniformCostSearch;
 
 public class AppTest {
     public static void main(String[] args) {
+
+        // Membuat Node dengan nama kota
         Node Jakarta = new Node("Jakarta");
         Node Bandung = new Node("Bandung");
         Node Cirebon = new Node("Cirebon");
@@ -16,6 +18,7 @@ public class AppTest {
         Node Surakarta = new Node("Surakarta");
         Node Yogyakarta = new Node("Yogyakarta");
 
+        // Menambahkan tetangga dari setiap kota
         Jakarta.addNightbor(Cirebon);
         Jakarta.addNightbor(Bandung);
 
@@ -48,6 +51,7 @@ public class AppTest {
         Malang.addNightbor(Surabaya);
         Malang.addNightbor(Surakarta);
 
+        // Mencari solusi dari Jakarta ke Malang dengan menggunakan BFS, DLS, dan UCS
         System.out.println("BFS");
         BreadthFirstSearch bfs = new BreadthFirstSearch();
         bfs.search(Malang, Jakarta);
@@ -59,6 +63,7 @@ public class AppTest {
         dls.search(Jakarta, Malang);
         System.out.println();
 
+        // Membuat NodeUCS dengan nama kota dan cost
         NodeUCS JakartaUCS = new NodeUCS(Jakarta, 0);
         NodeUCS BandungUCS = new NodeUCS(Bandung, 270);
         NodeUCS CirebonUCS = new NodeUCS(Cirebon, 327);
@@ -68,7 +73,7 @@ public class AppTest {
         NodeUCS SurabayaUCS = new NodeUCS(Surabaya, 1001);
         NodeUCS MalangUCS = new NodeUCS(Malang, 1073);
 
-
+        // Menambahkan tetangga dari setiap kota
         JakartaUCS.addNightbor(CirebonUCS);
         JakartaUCS.addNightbor(BandungUCS);
 
@@ -101,6 +106,7 @@ public class AppTest {
         MalangUCS.addNightbor(SurabayaUCS);
         MalangUCS.addNightbor(SurakartaUCS);
 
+        // Mencari solusi dari Jakarta ke Malang dengan menggunakan UCS
         System.out.println("UCS");
         UniformCostSearch ucs = new UniformCostSearch();
         ucs.search(MalangUCS, JakartaUCS);
