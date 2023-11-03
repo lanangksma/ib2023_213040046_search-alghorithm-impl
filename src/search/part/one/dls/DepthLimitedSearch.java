@@ -1,6 +1,7 @@
-package app.dls;
+package search.part.one.dls;
 
-import app.Node;
+
+import search.Node;
 
 public class DepthLimitedSearch {
 

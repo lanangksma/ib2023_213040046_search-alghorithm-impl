@@ -1,4 +1,4 @@
-package app.ucs;
+package search.part.one.ucs;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package app.bfs;
+package search.part.one.bfs;
 
-import app.Node;
+import search.Node;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -9,8 +9,8 @@ public class BreadthFirstSearch {
 
     //method search dengan parameter start dan goal
     public void search(Node start, Node goal) {
-        Queue<Solusi> queue = new LinkedBlockingQueue<>();
-        Solusi solusiStart = new Solusi();
+        Queue<search.part.one.bfs.Solusi> queue = new LinkedBlockingQueue<>();
+        search.part.one.bfs.Solusi solusiStart = new Solusi();
         solusiStart.setNode(start); //set node start
         queue.add(solusiStart); //menambahkan node start ke queue
         System.out.println("Mencari solusi dari " + start.getNilai() + " ke " + goal.getNilai());

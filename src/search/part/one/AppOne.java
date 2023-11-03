@@ -1,11 +1,12 @@
-package app;
+package search.part.one;
 
-import app.bfs.BreadthFirstSearch;
-import app.dls.DepthLimitedSearch;
-import app.ucs.NodeUCS;
-import app.ucs.UniformCostSearch;
+import search.part.one.bfs.BreadthFirstSearch;
+import search.part.one.dls.DepthLimitedSearch;
+import search.part.one.ucs.NodeUCS;
+import search.part.one.ucs.UniformCostSearch;
+import search.Node;
 
-public class AppTest {
+public class AppOne {
     public static void main(String[] args) {
 
         // Membuat Node dengan nama kota

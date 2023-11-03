@@ -1,42 +1,47 @@
-package app;
+package search.part.two.greedy.bfs;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
 
-    //inisialisasi variabel
     private String nilai;
     private List<Node> nightbor;
+    private int heuristic;
 
-    //membuat konstruktor Node dengan parameter nilai
     public Node(String nilai) {
-        nightbor = new ArrayList<>(); //inisialisasi list tetangga
+        nightbor = new ArrayList<>();
         this.nilai = nilai;
     }
 
-    //getter dan setter nilai dan tetangga, serta menambahkan node tetangga
-    public void setNilai(String nilai) {
-        this.nilai = nilai;
+    public int getHeuristic() {
+        return heuristic;
+    }
+
+    public void setHeuristic(int heuristic) {
+        this.heuristic = heuristic;
     }
 
     public String getNilai() {
         return nilai;
     }
 
-    public void setNightbor(List<Node> nightbor) {
-        this.nightbor = nightbor;
+    public void setNilai(String nilai) {
+        this.nilai = nilai;
     }
 
     public List<Node> getNightbor() {
         return nightbor;
     }
 
+    public void setNightbor(List<Node> nightbor) {
+        this.nightbor = nightbor;
+    }
+
     public void addNightbor(Node node) {
         nightbor.add(node);
     }
 
-    //mengoverride method equals untuk membandingkan nilai node
     @Override
     public boolean equals(Object obj) {
         //jika objek sama dengan node
@@ -47,3 +52,4 @@ public class Node {
         return false; //jika tidak maka nilai objek tidak sama dengan nilai node
     }
 }
+

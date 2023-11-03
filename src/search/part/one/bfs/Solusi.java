@@ -1,6 +1,6 @@
-package app.bfs;
+package search.part.one.bfs;
 
-import app.Node;
+import search.Node;
 
 import java.util.ArrayList;
 import java.util.List;
